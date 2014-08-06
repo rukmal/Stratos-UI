@@ -1,4 +1,12 @@
 extends ../base/layout
 
 block content
-	h1 test
+	link(rel="stylehseet" href="/stylesheets/form.css")
+	link(rel="stylesheet" href="/stylesheets/configure/autoscalingpolicies.css")
+	#centered.vertical-center
+		h1#maintitle.text-center Configure Autoscaling Policies
+		.container#content
+			form(action="#")
+				.form-group
+					label.formlabel Autoscaling Policy ID
+					input(type="text" placeholder="Enter an ID for the policy here").form-control
