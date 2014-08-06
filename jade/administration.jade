@@ -1,0 +1,33 @@
+extends layout
+
+block content
+	link(rel="stylesheet" href="stylesheets/administration.css")
+	#centered.vertical-center
+		h1#maintitle.text-center Administration
+		.text-center.container#content
+			.row
+				a.col-md-4.category(href="#")
+					p.categorypicture: span.glyphicon.glyphicon-cloud
+					h2.categorytitle IaaS Configuration
+					p.description Define and configure properties of individual IaaS providers.
+				a.col-md-4.category(href="#")
+					p.categorypicture: span.glyphicon.glyphicon-th
+					h2.categorytitle Partition Configuration
+					p.description Define partitions/partition groups to be used in autoscaling and deployment policies.
+				a.col-md-4.category(href="#")
+					p.categorypicture: span.glyphicon.glyphicon-road
+					h2.categorytitle Deployment Policies
+					p.description Define specific policies for cartridge deployment.
+			.row
+				a.col-md-4.category(href="#")
+					p.categorypicture: span.glyphicon.glyphicon-resize-full
+					h2.categorytitle Autoscaling Policies
+					p.description Define policies which specify inbound requests, memory usage and CPU usage etc.
+				a.col-md-4.category(href="#")
+					p.categorypicture: span.glyphicon.glyphicon-inbox
+					h2.categorytitle Cartridge/LB Definition
+					p.description Define and manage single/multi tenant cartridges.
+				a.col-md-4.category(href="#")
+					p.categorypicture: span.glyphicon.glyphicon-transfer
+					h2.categorytitle Multitenant Services
+					p.description Define and manage multitenant services.

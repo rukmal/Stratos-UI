@@ -1,20 +1,20 @@
 extends indexlayout
 
 block content
-	link(href='http://fonts.googleapis.com/css?family=News+Cycle|Karla' rel='stylesheet' type='text/css')
 	link(rel="stylesheet" href="stylesheets/index.css")
 	#centered.vertical-center
 		h1#maintitle.text-center Welcome to Apache Stratos
 		.text-center.container#content
-			a.col-md-4.category(href="administration")
-				p.categorypicture: span.glyphicon.glyphicon-wrench
-				h2.categorytitle Administration
-				p.description Configure partitions, deployment and scaling policies, cartridges and manage IaaS definitions.
-			a.col-md-4.category(href="#")
-				p.categorypicture: span.glyphicon.glyphicon-eye-open
-				h2.categorytitle Monitor
-				p.description View tenant topology structures, logs and subsciptions.
-			a.col-md-4.category(href="#")
-				p.categorypicture: span.glyphicon.glyphicon-user
-				h2.categorytitle User Management
-				p.description Add, remove and modify users in the tenant.
+			.row
+				a.col-md-4.category(href="administration.html")
+					p.categorypicture: span.glyphicon.glyphicon-wrench
+					h2.categorytitle Administration
+					p.description Configure partitions, deployment and scaling policies, cartridges and manage IaaS definitions.
+				a.col-md-4.category(href="#")
+					p.categorypicture: span.glyphicon.glyphicon-eye-open
+					h2.categorytitle Monitor
+					p.description View tenant topology structures, logs and subsciptions.
+				a.col-md-4.category(href="#")
+					p.categorypicture: span.glyphicon.glyphicon-user
+					h2.categorytitle User Management
+					p.description Add, remove and modify users in the tenant.
