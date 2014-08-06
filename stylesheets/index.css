@@ -1,55 +1,11 @@
-#maintitle {
-	margin-top: 1em;
-	font-family: 'Ubuntu', sans-serif;
-	color: rgb(255,255,255);
-	text-shadow: 0 0 7px rgb(75,75,75);
-}
-
 #content {
 	margin-top: 4em;
-	margin-bottom: 0em;
-	background-color: white;
 	height: 20em;
-	box-shadow: 0 0 20px 1px rgb(100,100,100);
 }
 
 .containertitle {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 2em;
-}
-
-.description {
-	font-family: 'Karla', sans-serif;
-	color: rgb(60,60,60);
-	text-decoration: none;
-}
-
-a {
-	text-decoration: none;
-}
-
-.category {
-	text-decoration: none !important;
-}
-
-.categorytitle {
-	font-family: 'Karla', sans-serif;
-	color: rgb(60,60,60);
-	text-decoration: none;
-}
-
-.categorypicture {
-	font-size: 6em;
-	color: rgb(0,179,232);
-	transition: color 1s;
-}
-
-.category {
-	margin-top: 1.5em;
-}
-
-.categorypicture:hover {
-	color: rgb(60,60,60);
 }
 
 #centered {
