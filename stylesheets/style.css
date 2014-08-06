@@ -17,7 +17,7 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 	color: rgb(60,60,60);
 	padding-left: 2.2em;
-	padding-top: 0.6em;
+	padding-top: 0.5em;
 	float: left;
 	font-size: 1.2em;
 }
@@ -39,7 +39,7 @@ body {
 	color: rgb(60,60,60);
 }
 
-#menuoptions {
+#leftoption {
 	margin-left: 2em;
 }
 
@@ -49,5 +49,18 @@ body {
 	margin-left: 1em;
 	margin-right: 1em;
 	font-family: 'Ubuntu', sans-serif;
-	color: green;
+	color: rgb(0,179,232);
+	transition: color 1s;
+}
+
+.menuoption:hover {
+	color: rgb(60,60,60);
+	text-decoration: none;
+}
+
+/* Note: For this to work, the height of the element must be specified*/
+.vertical-center {
+	margin: auto;
+	position: absolute;
+	top: 0; left: 0; bottom: 0; right: 0;
 }
