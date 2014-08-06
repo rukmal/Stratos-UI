@@ -1,5 +1,14 @@
 # Apache Stratos UI
 
+## Running the site
+
+Clone the repository, compile the jade files and serve the site locally.
+```bash
+$ git clone https://github.com/rukmal/Stratos-UI.git
+$ sh compile.sh
+$ python -m SimpleHTTPServer
+```
+
 ## Usage
 
 ### Cleaning files up
