@@ -1,2 +1,2 @@
 sh cleanup.sh
-sh compilesite.sh
+sh compile.sh

@@ -4,10 +4,15 @@ html
 		title Apache Stratos
 		link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
 		link(href='http://fonts.googleapis.com/css?family=Ubuntu|Karla' rel='stylesheet' type='text/css')
-		link(rel="stylesheet" href="stylesheets/style.css")
+		link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet")
+		link(rel="stylesheet" href="../stylesheets/style.css")
 	body
 		#titlebar
 			a#titletext(href="/") Apache Stratos
+			#menuoptions
+				a.menuoption#leftoption(href="configure.html") Configure
+				a.menuoption(href="#") Monitor
+				a.menuoption(href="#") Manage Users
 			p#usertext Test User
 			img#userimage(src="images/user.png")
 		block content
