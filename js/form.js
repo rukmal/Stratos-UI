@@ -17,3 +17,10 @@ function changeBoxHeight () {
 // Binding functions to collapsed box opening and closing
 $('#requests, #memory, #loadaverage').on('hidden.bs.collapse', changeBoxHeight);
 $('#requests, #memory, #loadaverage').on('shown.bs.collapse', changeBoxHeight);
+
+/**
+ * Function to handle bringing the side menu out
+ */
+$('.menutoggle').click(function () {
+	console.log('here');
+});

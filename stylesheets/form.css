@@ -42,3 +42,29 @@
 	height: inherit;
 	background-color: rgb(247,216,66);
 }
+
+.menu {
+	position: fixed;
+	float: left;
+	z-index: 99;
+	margin-top: 4em;
+}
+
+.menucontent {
+	position: fixed;
+	width: 5em;
+	background-color: white;
+	left: -5em;
+}
+
+.menutoggle {
+	background-color: white;
+	font-size: 1.5em;
+	color: rgb(60,60,60);
+	width: 2.7em;
+	box-shadow: 0 0 20px 1px rgb(100,100,100);
+	margin-left: 0;
+	height: 2em;
+	padding-top: 0.35em;
+	padding-left: 1.3em;
+}

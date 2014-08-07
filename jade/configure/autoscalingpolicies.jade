@@ -1,14 +1,9 @@
-extends ../base/layout
+extends ../base/form
 
-block content
+block form
 	link(rel="stylesheet" href="/stylesheets/configure/autoscalingpolicies.css")
-	link(rel="stylesheet" href="/stylesheets/form.css")
 	#centered.vertical-center
 		h1#maintitle.text-center Configure a new Autoscaling Policy
-		.menu
-			.col-md-4
-			.col-md-1
-				span.glyphicon.glyphicon-th-list
 		.container#content
 			form(action="#")
 				.form-group
@@ -100,5 +95,3 @@ block content
 						a.formbutton.formbutton-caution(href="#") JSON
 					.col-md-4
 						a.formbutton.formbutton-success(href="#") Deploy
-	script(src="/resources/cowboy.js")
-	script(src="/js/form.js")
