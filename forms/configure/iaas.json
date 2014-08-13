@@ -1,0 +1,6 @@
+{
+	"name": "Configure IaaS",
+	"title": "IaaS",
+	"new_url": "/configure/new/iaas",
+	"edit_url": "/configure/edit/iaas"
+}

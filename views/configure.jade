@@ -2,11 +2,11 @@ extends base/layout
 
 block content
 	link(rel="stylesheet" href="stylesheets/configure.css")
-	#centered.vertical-center
+	#centered
 		h1#maintitle.text-center Configure
 		.text-center.container#content
 			.row
-				a.col-md-4.category(href="#")
+				a.col-md-4.category(href="configure/iaas")
 					p.categorypicture: span.glyphicon.glyphicon-cloud
 					h2.categorytitle IaaS
 					p.description Define and configure properties of individual IaaS providers.

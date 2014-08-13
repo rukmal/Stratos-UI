@@ -1,0 +1,7 @@
+{
+	"name": "Configure Autoscaling Policies",
+	"title": "Autoscaling Policies",
+	"add_text": "Add a new Autoscaling Policy",
+	"new_url": "/configure/new/autoscalingpolicies",
+	"edit_url": "/configure/edit/autoscalingpolicies"
+}
