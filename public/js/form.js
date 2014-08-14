@@ -15,8 +15,8 @@ function changeBoxHeight () {
 }
 
 // Binding functions to collapsed box opening and closing
-$('#requests, #memory, #loadaverage').on('hidden.bs.collapse', changeBoxHeight);
-$('#requests, #memory, #loadaverage').on('shown.bs.collapse', changeBoxHeight);
+$('.subform').on('hidden.bs.collapse', changeBoxHeight);
+$('.subform').on('shown.bs.collapse', changeBoxHeight);
 
 // menu variables
 var menuIsShown = false;

@@ -3,8 +3,9 @@
 	"label": "Autoscaling Policies",
 	"name_singular": "Autoscaling Policy",
 	"add_text": "Add a new Autoscaling Policy",
+	"base_url": "autoscalingpolicies",
 	"new_url": "autoscalingpolicies/new",
-	"edit_url": "edit",
+	"edit_url": "autoscalingpolicies/edit",
 	"form_spec": [
 		{
 			"type": "field",
@@ -22,6 +23,7 @@
 		{
 			"type": "subform",
 			"label": "Requests in Flight",
+			"name": "requestsInFlight",
 			"content": [
 				{
 					"type": "field",
@@ -67,6 +69,110 @@
 					"label": "Gradient",
 					"placeholder": "Enter the request gradient here",
 					"name": "loadThresholds/requestsInFlight/gradient"
+				}
+			]
+		},
+		{
+			"type": "subform",
+			"label": "Memory Consumption",
+			"name": "memoryConsumption",
+			"content": [
+				{
+					"type": "field",
+					"default_value": "",
+					"editable_during_new": true,
+					"editable_during_edit": true,
+					"label": "Average",
+					"placeholder": "Enter the memory consumption average here",
+					"name": "loadThresholds/memoryConsumption/average"
+				},
+				{
+					"type": "field",
+					"default_value": "",
+					"editable_during_new": true,
+					"editable_during_edit": true,
+					"label": "Second Derivative",
+					"placeholder": "Enter the second derivative here",
+					"name": "loadThresholds/memoryConsumption/secondDerivative"
+				},
+				{
+					"type": "field",
+					"default_value": "",
+					"editable_during_new": true,
+					"editable_during_edit": true,
+					"label": "Gradient Scaling Margin",
+					"placeholder": "Enter the scale down margin of the gradient here",
+					"name": "loadThresholds/memoryConsumption/scaleDownMarginOfGradient"
+				},
+				{
+					"type": "field",
+					"default_value": "",
+					"editable_during_new": true,
+					"editable_during_edit": true,
+					"label": "Second Derivative Scaling Margin",
+					"placeholder": "Enter the scale down margin of the second derivative here",
+					"name": "loadThresholds/memoryConsumption/scaleDownMarginOfSecondDerivative"
+				},
+				{
+					"type": "field",
+					"default_value": "",
+					"editable_during_new": true,
+					"editable_during_edit": true,
+					"label": "Gradient",
+					"placeholder": "Enter the memory consumption gradient here",
+					"name": "loadThresholds/memoryConsumption/gradient"
+				}
+			]
+		},
+		{
+			"type": "subform",
+			"label": "Load Average",
+			"name": "loadAverage",
+			"content": [
+				{
+					"type": "field",
+					"default_value": "",
+					"editable_during_new": true,
+					"editable_during_edit": true,
+					"label": "Average",
+					"placeholder": "Enter the load average here",
+					"name": "loadThresholds/loadAverage/average"
+				},
+				{
+					"type": "field",
+					"default_value": "",
+					"editable_during_new": true,
+					"editable_during_edit": true,
+					"label": "Second Derivative",
+					"placeholder": "Enter the second derivative here",
+					"name": "loadThresholds/loadAverage/secondDerivative"
+				},
+				{
+					"type": "field",
+					"default_value": "",
+					"editable_during_new": true,
+					"editable_during_edit": true,
+					"label": "Gradient Scaling Margin",
+					"placeholder": "Enter the scale down margin of the gradient here",
+					"name": "loadThresholds/loadAverage/scaleDownMarginOfGradient"
+				},
+				{
+					"type": "field",
+					"default_value": "",
+					"editable_during_new": true,
+					"editable_during_edit": true,
+					"label": "Second Derivative Scaling Margin",
+					"placeholder": "Enter the scale down margin of the second derivative here",
+					"name": "loadThresholds/loadAverage/scaleDownMarginOfSecondDerivative"
+				},
+				{
+					"type": "field",
+					"default_value": "",
+					"editable_during_new": true,
+					"editable_during_edit": true,
+					"label": "Gradient",
+					"placeholder": "Enter the load gradient here",
+					"name": "loadThresholds/loadAverage/gradient"
 				}
 			]
 		}

@@ -38,12 +38,45 @@ block content
 				span.glyphicon.glyphicon-list
 	#centered
 		h1#maintitle.text-center Add a new #{name_singular}
+		// Jade functions
+		mixin field (label, placeholder, fieldName)
+			label.formlabel #{label}
+			input(type="text" placeholder="#{placeholder}" id="#{fieldName}").form-control
+		mixin title (content)
+			h4 #{content}
+		mixin subformComponent (component)
+			.col-xs-6
+				- if (component.type === 'field')
+					+field(component.label, component.placeholder, component.name)
+				- else if (component.type === 'title')
+					+title(component.content)
+		// Panel content
 		.container#content
 			.form(action="#")
 				- each spec in form_spec
 					- if (spec.type === 'field')
-						label.formlabel #{spec.label}
-						input(type="text" placeholder="#{spec.placeholder}" id="#{spec.name}").form-control
+						+field(spec.label, spec.placeholder, spec.name)
 					- else if (spec.type === 'title')
-						h4 #{spec.content}
+						+title(spec.content)
+					- else if (spec.type === 'subform')
+						.panel-group.subform(id="#{spec.name}")
+							.panel.panel-default
+								.panel-heading
+									h4.panel-title: a.togglelink(data-toggle="collapse" data-parent="#{spec.name}" href="##{spec.name}panel") #{spec.label}
+								.panel-collapse.collapse(id="#{spec.name}panel")
+									- var count = 0
+									while count < spec.content.length
+										.form-group
+											.row
+												+subformComponent(spec.content[count])
+												- if (count + 1 < spec.content.length)
+													+subformComponent(spec.content[count + 1])
+										- count = count + 2
+			.container.text-center
+				.col-md-4
+					a.formbutton.formbutton-danger(href="/configure/#{base_url}") Cancel
+				.col-md-4
+					a.formbutton.formbutton-caution(href="#") JSON
+				.col-md-4
+					a.formbutton.formbutton-success(href="#") Deploy
 	script(src="/js/form.js")
