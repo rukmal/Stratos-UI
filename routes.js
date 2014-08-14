@@ -19,29 +19,42 @@ function Routes (app) {
 		});
 	});
 
-	app.get('/configure/:aspectname', function (req, res) {
+	app.get('/configure/:aspectname/new', function (req, res) {
 		var aspect = req.params.aspectname;
 
-		// Checking if the url is valid
-		if (!TABLES.hasOwnProperty(aspect)) {
-			send404(res);
-		} else {
-			var tableData = openTableFile(TABLES[aspect]);
-			// Stratos API call
-			console.log(tableData);
-			res.render('table', tableData);
+		if (checkUrl(res, aspect)) {
+			res.render('form', openTableFile(TABLES[aspect]));
 		}
 	});
 
-	app.get('/table', function (req, res) {
-		res.render('table', {
-			name: 'testing'
-		});
+	app.get('/configure/:aspectname', function (req, res) {
+		var aspect = req.params.aspectname;
+
+		if (checkUrl(res, aspect)) {
+			res.render('table', openTableFile(TABLES[aspect]));
+		}
+	});
+
+	app.get('/test', function (req, res) {
+		res.render('configure/autoscalingpolicies');
 	});
 
 	/**
+	 * Function to check if the url is valid
+	 * @param  {Object} res    Express.js response object
+	 * @param  {String} aspect Name of the aspect in the url
+	 */
+	function checkUrl (res, aspect) {
+		var isValid = TABLES.hasOwnProperty(aspect);
+		if (!isValid) {
+			send404(res);
+		}
+		return isValid;
+	}
+
+	/**
 	 * Function to send a 404 status code
-	 * @param  {Object} res Express.js request object
+	 * @param  {Object} res Express.js response object
 	 */
 	function send404 (res) {
 		res.status(404);

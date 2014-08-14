@@ -37,7 +37,13 @@ block content
 			.col-md-1.menutoggle#menubutton
 				span.glyphicon.glyphicon-list
 	#centered
-		h1#maintitle.text-center #{name}
+		h1#maintitle.text-center Add a new #{name_singular}
 		.container#content
-			a.formbutton.formbutton-success(href="#{new_url}") #{add_text}
-	script(src="/js/table.js")
+			.form(action="#")
+				- each spec in form_spec
+					- if (spec.type === 'field')
+						label.formlabel #{spec.label}
+						input(type="text" placeholder="#{spec.placeholder}" id="#{spec.name}").form-control
+					- else if (spec.type === 'title')
+						h4 #{spec.content}
+	script(src="/js/form.js")
