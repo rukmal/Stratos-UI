@@ -40,6 +40,39 @@ function Routes (app) {
 		res.render('configure/autoscalingpolicies');
 	});
 
+	app.get('/sampleautoscaling', function (req, res) {
+		res.send({
+  "autoscalePolicy": [
+    {
+      "id": "economy",
+      "loadThresholds": {
+        "requestsInFlight": {
+          "average": 300,
+          "secondDerivative": 0,
+          "gradient": 0,
+          "scaleDownMarginOfGradient": 0,
+          "scaleDownMarginOfSecondDerivative": 0
+        },
+        "memoryConsumption": {
+          "average": 800,
+          "secondDerivative": 0,
+          "gradient": 0,
+          "scaleDownMarginOfGradient": 0,
+          "scaleDownMarginOfSecondDerivative": 0
+        },
+        "loadAverage": {
+          "average": 600,
+          "secondDerivative": 0,
+          "gradient": 0,
+          "scaleDownMarginOfGradient": 0,
+          "scaleDownMarginOfSecondDerivative": 0
+        }
+      }
+    }
+  ]
+});
+	});
+
 	/**
 	 * Function to check if the url is valid
 	 * @param  {Object} res    Express.js response object
