@@ -109,7 +109,7 @@ a {
 	color: rgb(60,60,60);
 }
 
-/* Note: For this to work, the height of the element must be specified*/
+/*Note: For this to work, the height of the element must be specified*/
 .vertical-center {
 	margin: auto;
 	position: absolute;

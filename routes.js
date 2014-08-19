@@ -2,7 +2,8 @@ function Routes (app) {
 
 	var TABLES = {
 		'autoscalingpolicies': 'autoscalingpolicies.json',
-		'iaas': 'iaas.json'
+		'iaas': 'iaas.json',
+		'partition': 'partitions.json'
 	}
 
 	var fs = require('fs');

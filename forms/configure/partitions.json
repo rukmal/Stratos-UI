@@ -1,11 +1,11 @@
 {
-	"name": "Configure IaaS",
-	"title": "IaaS",
-	"name_singular": "IaaS Provider",
-	"add_text": "Add a new IaaS",
-	"base_url": "iaas",
-	"new_url": "iaas/new",
-	"edit_url": "iaas/edit",
+	"name": "Configure Partitions",
+	"title": "Partitions",
+	"name_singular": "Partition",
+	"add_text": "Add a new Partition",
+	"base_url": "partition",
+	"new_url": "partition/new",
+	"edit_url": "partition/edit",
 	"form_spec": [
 		{
 			"type": "field",
