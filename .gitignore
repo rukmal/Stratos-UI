@@ -26,3 +26,4 @@ target
 *.iws
 *.ipr
 .idea
+atlassian-ide-plugin.xml
