@@ -22,7 +22,7 @@
 var caramel = require('caramel');
 
 caramel.configs({
-    context: '/stratos_new',
+    context: '/Stratos-UI',
     cache: true,
     negotiation: true,
     themer: function () {
