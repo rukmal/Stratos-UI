@@ -2,17 +2,21 @@ var render = function (theme, data, meta, require) {
 
     if(data.error.length == 0 ){
         theme('index', {
-            title: [
+            page_meta: [
                 {
                     partial:'index_title',
                     context:{
-                        page_title:'Apache Stratos Home'
+                        page_title:'Apache Stratos Home',
+                        page_description:'Apache Stratos Home'
                     }
                 }
             ],
             header:[
                 {
-                    partial: ''
+                    partial: 'index_header',
+                    context:{
+                        user_name:'admin@wso2.com'
+                    }
                 }
             ],
             body: [
