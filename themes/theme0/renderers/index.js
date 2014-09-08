@@ -19,7 +19,23 @@ var render = function (theme, data, meta, require) {
                     }
                 }
             ],
-            body: [
+            left_menu:[
+                {
+                    partial:'index_left_menu',
+                    context:{
+
+                    }
+                }
+            ],
+            right_menu_help:[
+                {
+                    partial:'index_right_menu_help',
+                    context:{
+
+                    }
+                }
+            ],
+            content: [
 
                 {
                     partial: '',
