@@ -1,3 +1,11 @@
+// Variable to store the current mode of input
+var isForm = true;
+
+// Finding the height of the rendered form, and setting the JSON
+// editor to the same height
+var formHeight = $('#textform').height();
+$('#jsoneditor').css('height', formHeight);
+
 // Variable to store height of the title text
 var titleHeight = $('#centered').height() - $('#content').height();
 
@@ -46,6 +54,27 @@ $('.menutoggle').click(function () {
 	}
 });
 
+/**
+ * Function to handle hiding and showing the JSON form
+ */
 $('#editortoggle').click(function () {
-	console.log("hello world");
+	if (isForm) {
+		changeDisplayMode('#textform', '#jsonform');
+		$('#editortoggle').text('Form View');
+		isForm = false;
+	} else {
+		changeDisplayMode('#jsonform', '#textform');
+		$('#editortoggle').text('JSON Editor')
+		isForm = true;
+	}
 });
+
+/**
+ * Function to change the css display mode of the elements
+ * @param  {String} element1 Element identifier #1 (this is the element that is hidden)
+ * @param  {String} element2 Element identifier #1 (this is the element that is shown)
+ */
+function changeDisplayMode (element1, element2) {
+	$(element1).css('display', 'none');
+	$(element2).css('display', 'inline');
+}

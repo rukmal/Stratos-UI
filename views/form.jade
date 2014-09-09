@@ -52,7 +52,7 @@ block content
 					+title(component.content)
 		// Panel content
 		.container#content
-			.form(action="#")
+			.form(action="#")#textform
 				- each spec in form_spec
 					- if (spec.type === 'field')
 						+field(spec.label, spec.placeholder, spec.name)
@@ -72,13 +72,15 @@ block content
 												- if (count + 1 < spec.content.length)
 													+subformComponent(spec.content[count + 1])
 										- count = count + 2
-			.jsonform
-				input(type="text")
+			#jsonform
+				.form-group
+					.form(action="#")
+						textarea(placeholder="JSON Editor")#jsoneditor.form-control
 			.container.text-center
 				.col-md-4
 					a.formbutton.formbutton-danger(href="/configure/#{base_url}") Cancel
 				.col-md-4
-					a.formbutton.formbutton-caution#editortoggle(href="#") Edit JSON
+					a.formbutton.formbutton-caution#editortoggle(href="#") JSON Editor
 				.col-md-4
 					a.formbutton.formbutton-success(href="#") Deploy
 	script(src="/js/form.js")

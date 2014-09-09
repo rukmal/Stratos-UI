@@ -99,3 +99,7 @@
 .submenuoption:hover {
 	text-decoration: none;
 }
+
+#jsonform {
+	display: none;
+}
