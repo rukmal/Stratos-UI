@@ -3,12 +3,29 @@ h1{font-family: 'Open Sans', san-serif;color: rgb(255,255,255);
     text-shadow: 0 0 5px rgb(75,75,75); margin: 2em 0px; font-weight: 600}
 /* index_header partial related styles */
 .user-image img{width: 50px;}
-.navbar{border-radius: 0px; box-shadow:0 0 5px -1px rgb(100,100,100);}
+.navbar{border-radius: 0px; box-shadow:0 0 5px -1px rgb(100,100,100); margin-bottom: 0px;}
 .navbar-default{background: #fff; }
 .logo img{width: 140px}
 .navbar-nav>li>a{padding: 5px;}
 .navbar-brand {float: left;height: 50px;padding: 6px 15px;font-size: 18px;line-height: 20px;}
 .navbar-nav{margin: 0px}
+
+/* index_sub_header partial related styles */
+.sub-header {
+    padding: 9px 15px;
+    border-bottom: 1px solid #d3d7db;
+    border-top: 1px solid #eee;
+    background: #f7f7f7;
+    position: relative;
+    height: 40px;
+}
+
+.sub-header h2 {
+    font-size: 18px;
+    color: #595858;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
 
 /*index_left_menu partial styles */
 .menu-left {
