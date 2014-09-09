@@ -44,7 +44,7 @@ var render = function (theme, data, meta, require) {
                         content_title:'Configure Apache Stratos',
                         content_body:{sections:[
                             {
-                                link:'configure/iaas',
+                                link:'configure_form.jag',
                                 title:'IaaS',
                                 icon:"fa-gears",
                                 description:"Configure partitions, deployment and scaling policies, cartridges and manage IaaS"
