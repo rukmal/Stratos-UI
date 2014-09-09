@@ -45,3 +45,7 @@ $('.menutoggle').click(function () {
 		menuIsShown = true;
 	}
 });
+
+$('#editortoggle').click(function () {
+	console.log("hello world");
+});

@@ -72,11 +72,13 @@ block content
 												- if (count + 1 < spec.content.length)
 													+subformComponent(spec.content[count + 1])
 										- count = count + 2
+			.jsonform
+				input(type="text")
 			.container.text-center
 				.col-md-4
 					a.formbutton.formbutton-danger(href="/configure/#{base_url}") Cancel
 				.col-md-4
-					a.formbutton.formbutton-caution(href="#") Edit JSON
+					a.formbutton.formbutton-caution#editortoggle(href="#") Edit JSON
 				.col-md-4
 					a.formbutton.formbutton-success(href="#") Deploy
 	script(src="/js/form.js")
