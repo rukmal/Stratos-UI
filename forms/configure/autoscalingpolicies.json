@@ -176,5 +176,31 @@
 				}
 			]
 		}
-	]
+	],
+	"raw_json": {
+		"id": "",
+		"loadThresholds": {
+			"requestsInFlight": {
+				"average": 0,
+				"secondDerivative": 0,
+				"scaleDownMarginOfGradient": 0,
+				"scaleDownMarginOfSecondDerivative": 0,
+				"gradient": 0
+			},			
+			"memoryConsumption": {
+				"average": 0,
+				"secondDerivative": 0,
+				"scaleDownMarginOfGradient": 0,
+				"scaleDownMarginOfSecondDerivative": 0,
+				"gradient": 0
+			},
+			"loadAverage": {
+				"average": 0,
+				"secondDerivative": 0,
+				"scaleDownMarginOfGradient": 0,
+				"scaleDownMarginOfSecondDerivative": 0,
+				"gradient": 0
+			}
+		}
+	}
 }
