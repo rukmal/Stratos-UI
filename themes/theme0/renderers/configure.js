@@ -19,6 +19,14 @@ var render = function (theme, data, meta, require) {
                     }
                 }
             ],
+            sub_header:[
+                {
+                    partial:'index_sub_header',
+                    context:{
+
+                    }
+                }
+            ],
             left_menu:[
                 {
                     partial:'index_left_menu',
@@ -44,37 +52,37 @@ var render = function (theme, data, meta, require) {
                         content_title:'Configure Apache Stratos',
                         content_body:{sections:[
                             {
-                                link:'configure_form.jag',
+                                link:'iaas/',
                                 title:'IaaS',
                                 icon:"fa-gears",
                                 description:"Configure partitions, deployment and scaling policies, cartridges and manage IaaS"
                             },
                             {
-                                link:'configure/partitions',
+                                link:'partitions/',
                                 title:'Partitions',
                                 icon:"fa-th-large",
                                 description:"Define partitions/partition groups to be used in autoscaling and deployment policies."
                             },
                             {
-                                link:'configure/deployment',
+                                link:'deployment/',
                                 title:'Deployment Policies',
                                 icon:"fa-road",
                                 description:"Define specific policies for cartridge deployment."
                             },
                             {
-                                link:'configure/auto-scale',
+                                link:'auto-scale/',
                                 title:'Autoscaling Policies',
                                 icon:"fa-expand",
                                 description:"Define policies which specify inbound requests, memory usage and CPU usage etc."
                             },
                             {
-                                link:'configure/cartridges',
+                                link:'cartridges/',
                                 title:'Cartridge/LB Definitions',
                                 icon:"fa-inbox",
                                 description:"Define and manage single/multi tenant cartridges."
                             },
                             {
-                                link:'configure/multitenent',
+                                link:'multitenent/',
                                 title:'Multitenant Services',
                                 icon:"fa-sitemap",
                                 description:"Define and manage multitenant services."

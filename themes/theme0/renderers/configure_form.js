@@ -19,6 +19,14 @@ var render = function (theme, data, meta, require) {
                     }
                 }
             ],
+            sub_header:[
+                {
+                    partial:'index_sub_header',
+                    context:{
+
+                    }
+                }
+            ],
             left_menu:[
                 {
                     partial:'index_left_menu',
