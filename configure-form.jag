@@ -23,8 +23,13 @@
 var log = new Log("apachestratos.configure_form");
 var error=[];
 var caramel = require('caramel');
+var uriMatcher = new URIMatcher(request.getRequestURI());
 
+var elements = uriMatcher.match('/{context}/configure/{formtype}/');
+
+log.info(elements.context);
 caramel.render({
+    config_path_l2:elements.formtype,
     error: error
 });
 

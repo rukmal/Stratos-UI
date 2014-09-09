@@ -23,7 +23,7 @@ var render = function (theme, data, meta, require) {
                 {
                     partial:'index_sub_header',
                     context:{
-
+                        breadcrumb_path_l2:data.config_path_l2
                     }
                 }
             ],
