@@ -94,11 +94,13 @@ function generateHtml (jsonSpec) {
 				outputHtml += "<div class='form-group'>";
 				outputHtml += "<div class='row'>";
 			}
+			outputHtml += "<div class='col-xs-6'>";
 			if (child.type === 'field') {
 				outputHtml += generateFieldHtml(child.label, child.placeholder, child.name);
 			} else if (child.type === 'title') {
 				outputHtml += generateTitleHtml(child.content);
 			}
+			outputHtml += "</div>";
 			count++;
 		}
 		if (count % 2 === 1) {
@@ -132,6 +134,7 @@ var caramelData = {
 	config_path_l2: elements.formtype,
 	isForm: isForm,
 	formHtml: finalHtml,
+	formData: formData,
 	error: error
 }
 

@@ -49,6 +49,7 @@ var render = function (theme, data, meta, require) {
                     context:{
                         form_action:data.form_action,
                         formHtml:data.formHtml,
+                        formData:data.formData,
                         isForm:data.isForm
                     }
                 }
