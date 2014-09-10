@@ -39,6 +39,7 @@ $('#editortoggle').click(function () {
 		$('#editortoggle').text('JSON Editor')
 		isForm = true;
 	}
+	changeBoxHeight();
 });
 
 /**
