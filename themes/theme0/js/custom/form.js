@@ -105,25 +105,32 @@ function getJsonSkeleton () {
  * view from the text form
  */
 function updateJsonView () {
+
+	/**
+	 * Function to update a field in the
+	 * JSON version of the form
+	 * @param  {String} current   Current key to be updated
+	 * @param  {Array}  remaining Hieracial path to the final value to be updated
+	 */
+	function updateJsonField (current, remaining) {
+		if (path.length > 1) {
+
+		} else {
+
+		}
+	}
+
 	if (jsonSkeleton === undefined) {
 		getJsonSkeleton();
 	}
 	$('#textform :input').each(function () {
 		var currentInputField = $(this);
 		var currentInput = currentInputField.val();
-		// if (currentInput != '') {
+		if (currentInput != '') {
 			var currentId = currentInputField.attr('id');
 			var jsonPath = currentId.split('/');
-			console.log(jsonPath);
-		// }
+		}
 	});
-
-	/**
-	 * Function to update a field in the
-	 * JSON version of the form
-	 * @param  {Array} path Hierachial path to the record
-	 */
-	function updateJsonField (path) {
-		
-	}
+	// Stringifying and prettifying json, then placing it in the editor
+	$('#jsoneditor').text(JSON.stringify(currentJson, null, '\t'));
 }

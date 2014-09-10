@@ -103,3 +103,7 @@
 #jsonform {
 	display: none;
 }
+
+#jsoneditor {
+	resize: none;
+}
