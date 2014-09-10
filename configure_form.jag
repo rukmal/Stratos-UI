@@ -55,7 +55,7 @@ function generateHtml (jsonSpec) {
 	 */
 	function generateFieldHtml (label, placeholder, fieldName) {
 		var labelHtml = "<label class='formlabel'>" + label + "</label>";
-		var inputHtml = "<input type='text' placeholder='" + placeholder + "' id='" + fieldName + "' class='formcontrol'>";
+		var inputHtml = "<input type='text' placeholder='" + placeholder + "' id='" + fieldName + "' class='form-control'>";
 		return labelHtml + inputHtml;
 	}
 
@@ -81,7 +81,7 @@ function generateHtml (jsonSpec) {
 		outputHtml += "<div class='panel-group subform' id='" + name + "'>";
 		outputHtml += "<div class='panel panel-default'>";
 		outputHtml += "<div class='panel-heading'>";
-		outputHtml += "<h4 class='panel-title'><a class='togglelink' data-toggle='collapse' data-parent='" + name + "' href='" + name + "panel'>" + label + "</a></h4>";
+		outputHtml += "<h4 class='panel-title'><a class='togglelink' data-toggle='collapse' data-parent='" + name + "' href='#" + name + "panel'>" + label + "</a></h4>";
 		outputHtml += "</div>";
 		outputHtml += "<div class='panel-collapse collapse' id='" + name + "panel'>";
 		count = 0;

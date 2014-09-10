@@ -1,0 +1,105 @@
+#content {
+	padding-bottom: 1.5em;
+	padding-top: 1em;
+}
+
+.formlabel {
+	float: left !important;
+}
+
+.formbutton {
+	height: 2em;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	font-size: 1.1em;
+	font-family: 'Ubuntu', sans-serif;
+	text-decoration: none;
+	color: rgb(60,60,60);
+	border-radius: 5px;
+}
+
+.formbutton:hover {
+	color: rgb(60,60,60);
+	text-decoration: none;
+}
+
+.formbutton-danger {
+	width: inherit;
+	height: inherit;
+	background-color: rgb(241,95,116);
+}
+
+.formbutton-success {
+	width: inherit;
+	height: inherit;
+	background-color: rgb(152,203,74);
+}
+
+.formbutton-caution {
+	width: inherit;
+	height: inherit;
+	background-color: rgb(247,216,66);
+}
+
+.menu {
+	position: fixed;
+	float: left;
+	z-index: 99;
+	margin-top: 4em;
+}
+
+.menucontent {
+	position: fixed;
+	width: 10em;
+	background-color: white;
+	left: -10em;
+	box-shadow: 0 0 20px 1px rgb(100,100,100);
+	z-index: 1;
+	padding-top: 0.5em;
+}
+
+.menutoggle {
+	background-color: white;
+	font-size: 1.5em;
+	color: rgb(60,60,60);
+	width: 2.7em;
+	box-shadow: 0 0 20px 1px rgb(100,100,100);
+	height: 2em;
+	padding-top: 0.35em;
+	padding-left: 1.3em;
+	left: 0;
+	z-index: 0;
+}
+
+.divider {
+	width: 100%;
+	height: 0.2em;
+	background-color: rgb(200,200,200);
+	margin-top: 0.2em;
+	margin-bottom: 0.5em;
+}
+
+.menupicture {
+	font-size: 1em;
+	color: rgb(0,179,232);
+	transition: color 1s;
+}
+
+.menupicture:hover {
+	text-decoration: none;
+	color: rgb(60,60,60);
+}
+
+.menutitle {
+	color: rgb(60,60,60);
+}
+
+.submenuoption:hover {
+	text-decoration: none;
+}
+
+#jsonform {
+	display: none;
+}
