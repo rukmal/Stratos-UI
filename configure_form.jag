@@ -27,17 +27,21 @@ var uriMatcher = new URIMatcher(request.getRequestURI());
 
 var elements = uriMatcher.match('/{context}/configure/{formtype}/');
 
+var isForm = false;
+
 if(!elements){
     elements = uriMatcher.match('/{context}/configure/{formtype}/{action}/');
+    isForm = true;
 }
 
-var form_data = require('forms/configure/' + elements.formtype + '.json');
+var caramelData = {
+	config_path_l2: elements.formtype,
+	isForm: isForm,
+	error: error
+}
 
-caramel.render({
-    config_path_l2:elements.formtype,
-    form_action:elements.action,
-    form_json:form_data,
-    error: error
-});
+caramelData['form_json'] = require('forms/configure/' + elements.formtype + '.json');
+
+caramel.render(caramelData);
 
 %>

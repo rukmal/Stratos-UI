@@ -49,7 +49,8 @@ var render = function (theme, data, meta, require) {
                     context:{
                         content_title:'test',
                         form_action:data.form_action,
-                        form_json:data.form_json
+                        form_json:data.form_json,
+                        isForm:data.isForm
                     }
                 }
 
