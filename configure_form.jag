@@ -103,9 +103,7 @@ function generateHtml (jsonSpec) {
 			outputHtml += "</div>";
 			count++;
 		}
-		if (count % 2 === 1) {
-			outputHtml += "</div></div>";
-		}
+		outputHtml += "</div></div>";
 		outputHtml += "</div>";
 		outputHtml += "</div>";
 		outputHtml += "</div>";
