@@ -1,10 +1,8 @@
 <div class="row">
     <div class="title-main text-center">
-        <h1>{{content_title}}</h1>
-		{{#if isForm}}
-			<h1> Testing </h1>
-			<p>Hello world</p>
-		{{/if}}
+        <h1>test</h1>
     </div>
 </div>
-{{dump .}}
+{{#if isForm}}
+	{{formHtml}}
+{{/if}}

@@ -45,7 +45,7 @@
 					"editable_during_new": true,
 					"editable_during_edit": true,
 					"label": "Name",
-					"placeholder": "Enter an name here",
+					"placeholder": "Enter a name here",
 					"name": "property/name"
 				},
 				{

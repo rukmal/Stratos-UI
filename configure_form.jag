@@ -34,13 +34,107 @@ if(!elements){
     isForm = true;
 }
 
+var formData = require('forms/configure/' + elements.formtype + '.json');
+
+/**
+ * UI generation logic
+ */
+
+/**
+ * Function to generate HTML for the form
+ * @param  {JSON} jsonSpec JSON description of the form
+ * @return {String}        Formatted HTML ready to be inserted into the template
+ */
+function generateHtml (jsonSpec) {
+	/**
+	 * Function to generate the html for a text field in the form
+	 * @param  {String} label       Label to be put in the form
+	 * @param  {String} placeholder Placeholder for the field
+	 * @param  {String} fieldName   Name of the field
+	 * @return {String}             Formatted HTML ready to be inserted in the template
+	 */
+	function generateFieldHtml (label, placeholder, fieldName) {
+		var labelHtml = "<label class='formlabel'>" + label + "</label>";
+		var inputHtml = "<input type='text' placeholder='" + placeholder + "' id='" + fieldName + "' class='formcontrol'>";
+		return labelHtml + inputHtml;
+	}
+
+	/**
+	 * Function to generate html for a title in the form
+	 * @param  {String} content Title to be in the form
+	 * @return {String}         Formatted HTML ready to be inserted in the template
+	 */
+	function generateTitleHtml (content) {
+		var titelHtml = "<h4" + content + "</h4>";
+		return titelHtml;
+	}
+
+	/**
+	 * Function to generate html for the subform
+	 * @param  {String} label   Label of the subflrm
+	 * @param  {String} name    Name of the subform
+	 * @param  {Array}  content Content of the subform
+	 * @return {String}         Formatted HTML ready to be inserted in teh template
+	 */
+	function generateSubformHtml(label, name, content) {
+		var outputHtml = "";
+		outputHtml += "<div class='panel-group subform' id='" + name + "'>";
+		outputHtml += "<div class='panel panel-default'>";
+		outputHtml += "<div class='panel-heading'>";
+		outputHtml += "<h4 class='panel-title'><a class='togglelink' data-toggle='collapse' data-parent='" + name + "' href='" + name + "panel'>" + label + "</a></h4>";
+		outputHtml += "</div>";
+		outputHtml += "<div class='panel-collapse collapse' id='" + name + "panel'>";
+		count = 0;
+		for (var childNumber in content) {
+			var child = content[childNumber];
+			if (count % 2 === 0) {
+				if (count != 0) {
+					outputHtml += "</div></div>";
+				}
+				outputHtml += "<div class='form-group'>";
+				outputHtml += "<div class='row'>";
+			}
+			if (child.type === 'field') {
+				outputHtml += generateFieldHtml(child.label, child.placeholder, child.name);
+			} else if (child.type === 'title') {
+				outputHtml += generateTitleHtml(child.content);
+			}
+			count++;
+		}
+		if (count % 2 === 1) {
+			outputHtml += "</div></div>";
+		}
+		outputHtml += "</div>";
+		outputHtml += "</div>";
+		outputHtml += "</div>";
+		return outputHtml;
+	}
+
+	var outputHtml = "";
+	for (var specNumber in jsonSpec) {
+		var spec = jsonSpec[specNumber];
+		if (spec.type === 'field') {
+			outputHtml += generateFieldHtml(spec.label, spec.placeholder, spec.name);
+		} else if (spec.type === 'title') {
+			outputHtml += generateTitleHtml(spec.content);
+		} else if (spec.type === 'subform') {
+			outputHtml += generateSubformHtml(spec.label, spec.name, spec.content);
+		}
+	}
+	return outputHtml;
+}
+
+var finalHtml = "<div class='container' id='content'><div class='form' action='#' id='textform'>";
+finalHtml += generateHtml(formData.form_spec);
+finalHtml += "</div></div>"
+
 var caramelData = {
 	config_path_l2: elements.formtype,
 	isForm: isForm,
+	formHtml: finalHtml,
 	error: error
 }
 
-caramelData['form_json'] = require('forms/configure/' + elements.formtype + '.json');
 
 caramel.render(caramelData);
 
