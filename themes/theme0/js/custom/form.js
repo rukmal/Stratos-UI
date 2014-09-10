@@ -57,6 +57,7 @@ function changeDisplayMode (element1, element2) {
  * Handling editor view switching
  */
 var jsonSkeleton;
+var currentJson;
 
 /**
  * Function to get the JSON skeleton from the server
@@ -73,11 +74,56 @@ function getJsonSkeleton () {
 		category: currentCategory,
 		name: currentPage
 	}
-	$.post('/Stratos-UI/rawjson', JSON.stringify(requestData), function (data) {
+
+	/**
+	 * Function to assign data from the request to the
+	 * corresponding variables
+	 * @param  {String} data       Data from the request
+	 * @param  {String} textStatus Description of the status of the request
+	 * @param  {jqXHR} jqXHR       jQuery request object
+	 */
+	function assignData (data, textStatus, jqXHR) {
 		jsonSkeleton = data;
+		// Setting the current json to the skeleton if it is also undefined
+		if (currentJson === undefined) {
+			currentJson = jsonSkeleton;
+		}
+	}
+
+	$.ajax({
+		type: 'POST',
+		url: '/Stratos-UI/rawjson',
+		data: JSON.stringify(requestData),
+		dataType: 'json',
+		success: assignData,
+		async: false
 	});
 }
 
+/**
+ * Function to update the current JSON
+ * view from the text form
+ */
 function updateJsonView () {
+	if (jsonSkeleton === undefined) {
+		getJsonSkeleton();
+	}
+	$('#textform :input').each(function () {
+		var currentInputField = $(this);
+		var currentInput = currentInputField.val();
+		// if (currentInput != '') {
+			var currentId = currentInputField.attr('id');
+			var jsonPath = currentId.split('/');
+			console.log(jsonPath);
+		// }
+	});
 
+	/**
+	 * Function to update a field in the
+	 * JSON version of the form
+	 * @param  {Array} path Hierachial path to the record
+	 */
+	function updateJsonField (path) {
+		
+	}
 }

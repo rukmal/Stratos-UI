@@ -48,7 +48,7 @@ if (request.getMethod() != 'POST') {
  * Function to open the josn file and return the
  * JSON skeleton of the corresponding API call
  * @param  {String} category Category of the form (i.e. user management/configure)
- * @param  {Strign} name     Name of the form (eg: autoscalingpolicies, iaas)
+ * @param  {String} name     Name of the form (eg: autoscalingpolicies, iaas)
  * @return {JSON}            JSON skeleton of the corresponding API call
  */
 function openFile (category, name) {
