@@ -27,6 +27,13 @@ if (request.getMethod() != 'POST') {
 } else {
 	try {
 		var requestData = request.getContent();
+		if (typeof(requestData) === 'string') {
+			try {
+				requestData = eval('(' + requestData + ')');
+			} catch (e) {
+				response.sendError(400);
+			}
+		}
 		if ('category' in requestData && 'name' in requestData) {
 			response.content = openFile(requestData.category, requestData.name);
 		} else {

@@ -31,6 +31,7 @@ $('.subform').on('shown.bs.collapse', changeBoxHeight);
  */
 $('#editortoggle').click(function () {
 	if (isForm) {
+		updateJsonView();
 		changeDisplayMode('#textform', '#jsonform');
 		$('#editortoggle').text('Form View');
 		isForm = false;
@@ -50,4 +51,33 @@ $('#editortoggle').click(function () {
 function changeDisplayMode (element1, element2) {
 	$(element1).css('display', 'none');
 	$(element2).css('display', 'inline');
+}
+
+/**
+ * Handling editor view switching
+ */
+var jsonSkeleton;
+
+/**
+ * Function to get the JSON skeleton from the server
+ * and assign it to the jsonSkeleton variable
+ */
+function getJsonSkeleton () {
+	var currentUrl = document.URL;
+	var reversedUrlPath = currentUrl.split('/').reverse();
+	// Note: The following is assuming that the path is of the format
+	// https://[stratos_ui_url]/{currentCategory}/{currentPage}
+	var currentPage = reversedUrlPath[1];
+	var currentCategory = reversedUrlPath[2];
+	var requestData = {
+		category: currentCategory,
+		name: currentPage
+	}
+	$.post('/Stratos-UI/rawjson', JSON.stringify(requestData), function (data) {
+		jsonSkeleton = data;
+	});
+}
+
+function updateJsonView () {
+
 }
