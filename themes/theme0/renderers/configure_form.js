@@ -47,9 +47,10 @@ var render = function (theme, data, meta, require) {
                 {
                     partial:'configure_form',
                     context:{
-                        content_title:'test',
                         form_action:data.form_action,
-                        form_json:data.form_json
+                        formHtml:data.formHtml,
+                        formData:data.formData,
+                        isForm:data.isForm
                     }
                 }
 

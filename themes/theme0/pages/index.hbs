@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="{{url "/themes/theme0/css/bootstrap-3.2.0/bootstrap.min.css"}}" type="text/css" >
     <link rel="stylesheet" href="{{url "/themes/theme0/css/custom.css"}}" type="text/css" >
     <link rel="stylesheet" href="{{url "/themes/theme0/css/font-awesome-4.2.0/font-awesome.min.css"}}" type="text/css" >
+    <link rel="stylesheet" href="{{url "/themes/theme0/css/custom/style.css"}}">
+    <link rel="stylesheet" href="{{url "/themes/theme0/css/custom/form.css"}}">
     {{css .}}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,6 +29,8 @@
     <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="{{url "/themes/theme0/ui/js/excanvas.min.js"}}"></script><![endif]-->
 </head>
 <body>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 {{include header}}
 {{include sub_header}}
 {{include left_menu}}
@@ -36,9 +40,9 @@
 </div>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script type="text/javascript" src="{{url "/themes/theme0/js/jquery-1.11.1/jquery-1.11.1.js"}}"></script>
-<script type="text/javascript" src="{{url "/themes/theme0/js/bootstrap-3.2.0/bootstrap.min.js"}}"></script>
 <script type="text/javascript" src="{{url "/themes/theme0/js/custom.js"}}"></script>
+<script src="{{url "/themes/theme0/js/custom/script.js"}}"></script>
+<script src="{{url "/themes/theme0/js/custom/form.js"}}"></script>
 {{js .}}
 </body>
 </html>
