@@ -1,8 +1,8 @@
 # Ignoring system files
 .DS_Store
 
-# Ignoring root-level (compiled) html files
-*.html
+
+
 
 # Ignoring node modules
 node_modules
