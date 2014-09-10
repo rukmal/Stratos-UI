@@ -70,7 +70,7 @@ var render = function (theme, data, meta, require) {
                                 description:"Define specific policies for cartridge deployment."
                             },
                             {
-                                link:'auto-scale/',
+                                link:'autoscalingpolicies/',
                                 title:'Autoscaling Policies',
                                 icon:"fa-expand",
                                 description:"Define policies which specify inbound requests, memory usage and CPU usage etc."

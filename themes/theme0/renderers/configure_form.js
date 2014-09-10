@@ -48,7 +48,7 @@ var render = function (theme, data, meta, require) {
                     partial:'configure_form',
                     context:{
                         content_title:'test',
-                        json_definition:'sdffdd'
+                        form_json:data.form_json
                     }
                 }
 
