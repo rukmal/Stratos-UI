@@ -112,11 +112,14 @@ function updateJsonView () {
 	 * @param  {String} current   Current key to be updated
 	 * @param  {Array}  remaining Hieracial path to the final value to be updated
 	 */
-	function updateJsonField (current, remaining) {
-		if (path.length > 1) {
-
+	function updateJsonField (name, value, type, current, remaining) {
+		console.log('current: ' + JSON.stringify(current) + ' - remaining: ' + JSON.stringify(remaining));
+		if (remaining.length === 1) {
+			if (typeof(current) != 'Array') {
+				current[name] = value;
+			}
 		} else {
-
+			updateJsonField(name, value, type, current[remaining.pop()], remaining);
 		}
 	}
 
@@ -128,7 +131,15 @@ function updateJsonView () {
 		var currentInput = currentInputField.val();
 		if (currentInput != '') {
 			var currentId = currentInputField.attr('id');
-			var jsonPath = currentId.split('/');
+			var name = currentId.split('/').pop();
+			var jsonPath = currentId.split('/').reverse();
+			var current;
+			if (jsonPath.length > 1) {
+				current = currentJson[jsonPath.pop()];
+			} else {
+				current = currentJson;
+			}
+			updateJsonField(name, currentInput, 'blah', current, jsonPath);
 		}
 	});
 	// Stringifying and prettifying json, then placing it in the editor
