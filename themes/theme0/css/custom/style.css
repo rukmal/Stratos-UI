@@ -1,116 +1,122 @@
-body {
-	height: 100%;
-	width: 100%;
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
+#content {
+	padding-bottom: 1.5em;
+	padding-top: 1em;
 }
 
-#titlebar {
+.formlabel {
+	float: left !important;
+}
+
+.formbutton {
+	height: 2em;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	font-size: 1.1em;
+	font-family: 'Ubuntu', sans-serif;
+	text-decoration: none;
+	color: rgb(60,60,60);
+	border-radius: 5px;
+}
+
+.formbutton:hover {
+	color: rgb(60,60,60);
+	text-decoration: none;
+}
+
+.formbutton-danger {
+	width: inherit;
+	height: inherit;
+	background-color: rgb(241,95,116);
+}
+
+.formbutton-success {
+	width: inherit;
+	height: inherit;
+	background-color: rgb(152,203,74);
+}
+
+.formbutton-caution {
+	width: inherit;
+	height: inherit;
+	background-color: rgb(247,216,66);
+}
+
+.menu {
+	position: fixed;
+	float: left;
+	z-index: 99;
+	margin-top: 4em;
+}
+
+.menucontent {
+	position: fixed;
+	width: 10em;
 	background-color: white;
-	width: 100%;
-	height: 3em;
-	box-shadow: 0 0 6px 2px rgb(100,100,100);
+	left: -10em;
+	box-shadow: 0 0 20px 1px rgb(100,100,100);
+	z-index: 1;
+	padding-top: 0.5em;
 }
 
-#maintitle {
+.menutoggle {
+	background-color: white;
+	font-size: 1.5em;
+	color: rgb(60,60,60);
+	width: 2.7em;
+	box-shadow: 0 0 20px 1px rgb(100,100,100);
+	height: 2em;
+	padding-top: 0.35em;
+	padding-left: 1.3em;
+	left: 0;
+	z-index: 0;
+}
+
+.divider {
+	width: 100%;
+	height: 0.2em;
+	background-color: rgb(200,200,200);
+	margin-top: 0.2em;
 	margin-bottom: 0.5em;
 }
 
-#titletext {
-	font-family: 'Ubuntu', sans-serif;
-	color: rgb(60,60,60);
-	padding-left: 2.2em;
-	padding-top: 0.5em;
-	float: left;
-	font-size: 1.2em;
-	text-decoration: none;
-}
-
-#userimage {
-	height: 2.2em;
-	float: right;
-	margin-top: 0.35em;
-	margin-right: 1em;
-	border: 1px solid gray;
-	border-radius: 10px;
-}
-
-#usertext {
-	float: right;
-	padding-top: 0.7em;
-	padding-right: 2.2em;
-	font-family: 'Ubuntu', sans-serif;
-	color: rgb(60,60,60);
-}
-
-#leftoption {
-	margin-left: 2em;
-}
-
-.menuoption {
-	float: left;
-	margin-top: 0.8em;
-	margin-left: 1em;
-	margin-right: 1em;
-	font-family: 'Ubuntu', sans-serif;
+.menupicture {
+	font-size: 1em;
 	color: rgb(0,179,232);
 	transition: color 1s;
 }
 
-#maintitle {
-	font-family: 'Ubuntu', sans-serif;
-	color: rgb(255,255,255);
-	text-shadow: 0 0 5px rgb(75,75,75);
-}
-
-#content {
-	margin-bottom: 0em;
-	background-color: white;
-	box-shadow: 0 0 20px 1px rgb(100,100,100);
-}
-
-.menuoption:hover {
+.menupicture:hover {
+	text-decoration: none;
 	color: rgb(60,60,60);
+}
+
+.menutitle {
+	color: rgb(60,60,60);
+}
+
+.submenuoption:hover {
 	text-decoration: none;
 }
 
-.description {
-	font-family: 'Karla', sans-serif;
-	color: rgb(60,60,60);
-	text-decoration: none;
+#jsonform {
+	display: none;
 }
 
-a {
-	text-decoration: none;
-}
-
-.category {
-	text-decoration: none !important;
-}
-
-.categorytitle {
-	font-family: 'Karla', sans-serif;
-	color: rgb(60,60,60);
-	text-decoration: none;
-}
-
-.categorypicture {
-	font-size: 6em;
-	color: rgb(0,179,232);
-	transition: color 1s;
-}
-
-.category {
-	margin-top: 1.5em;
-}
-
-.categorypicture:hover {
-	color: rgb(60,60,60);
+#jsoneditor {
+	resize: none;
 }
 
 /*Note: For this to work, the height of the element must be specified*/
 .vertical-center {
-	margin: auto;
-	position: absolute;
-	top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+#content {
+    margin-bottom: 0em;
+    background-color: white;
+    box-shadow: 0 0 20px 1px rgb(100,100,100);
 }

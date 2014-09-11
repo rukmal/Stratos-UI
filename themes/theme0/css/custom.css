@@ -107,9 +107,13 @@ h1{font-family: 'Open Sans', san-serif;color: rgb(255,255,255);
 }
 
 .content a:hover, .content a:focus {
-    color: #7fbee8;
+    color: #7b828c;
     text-decoration: none;
 }
+.content a:hover > .content-menu-block i{
+    color: #7b828c;
+}
+
 
 .border-right{
     border-right: 1px solid #e4e7ea;
