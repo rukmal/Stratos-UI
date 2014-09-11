@@ -103,3 +103,17 @@
 #jsonform {
 	display: none;
 }
+
+
+/*Note: For this to work, the height of the element must be specified*/
+.vertical-center {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+
+#content {
+    margin-bottom: 0em;
+    background-color: white;
+    box-shadow: 0 0 20px 1px rgb(100,100,100);
+}
