@@ -1,14 +1,55 @@
-<div id="centered">
-	<div class="row">
-	    <div class="title-main text-center">
-	    	{{#if isForm}}
-	       		<h1>{{formData.add_text}}</h1>
-	       	{{else}}
-	       		<h1>{{formData.name}}
-	       	{{/if}}
-	    </div>
-	</div>
-	{{#if isForm}}
-		{{{formHtml}}}
-	{{/if}}
-</div>
+{{#if isForm}}
+    <div id="centered">
+        <div class="row title">
+            <div class="title-main text-center">
+                {{#if isForm}}
+                    <h1>{{formData.add_text}}</h1>
+                {{else}}
+                    <h1>{{formData.name}}</h1>
+                {{/if}}
+            </div>
+        </div>
+        {{#if isForm}}
+            {{{formHtml}}}
+        {{/if}}
+    </div>
+
+{{else}}
+    <div class="row title">
+        <div class="title-main text-center">
+            <h1>{{formData.name}}</h1>
+        </div>
+    </div>
+    <div class="container content">
+        <div class="row text-center">
+            <div class="row form-toolbar ">
+                <div class="col-md-5">
+                    <input type="text" class="form-control" placeholder="Search">
+
+                </div>
+                <div class="col-md-7 text-right">
+                    <a type="button" class="btn btn-primary" href="new/">New</a>
+                </div>
+
+
+            </div>
+            <div class="row">
+                {{#each content_body.sections}}
+                    <a href="{{link}}" class="block">
+                        <div class="col-md-4  content-menu-block border-right" >
+                            <div class="content-menu-icon">
+                                <i class="fa {{icon}} block"></i>
+                            </div>
+                            <div class="content-menu-title">
+                                <h2>{{title}}</h2>
+                            </div>
+                            <div class="content-menu-description">{{description}} </div>
+
+                        </div>
+                    </a>
+                {{/each}}
+            </div>
+
+        </div>
+    </div>
+{{/if}}
