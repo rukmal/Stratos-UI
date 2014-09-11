@@ -1,6 +1,6 @@
 var resources = function (page, meta) {
     return {
         js: ['custom/script.js', 'custom/form.js'],
-        css: ['custom/style.css', 'custom/form.css']
+        css: [ 'custom/form.css']
     };
 };
