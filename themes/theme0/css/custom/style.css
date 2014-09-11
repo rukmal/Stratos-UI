@@ -75,6 +75,9 @@
 	display: none;
 }
 
+#jsoneditor {
+	resize: none;
+}
 
 /*Note: For this to work, the height of the element must be specified*/
 .vertical-center {
