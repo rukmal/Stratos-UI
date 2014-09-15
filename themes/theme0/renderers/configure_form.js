@@ -1,13 +1,13 @@
 var render = function (theme, data, meta, require) {
 
-    if(data.error.length == 0 ){
+    if(data.error.length === 0 ){
         theme('index', {
             page_meta: [
                 {
-                    partial:'index_title',
-                    context:{
-                        page_title:'Apache Stratos Home',
-                        page_description:'Apache Stratos Home'
+                    partial: 'index_title',
+                    context: {
+                        page_title: 'Apache Stratos Home',
+                        page_description: 'Apache Stratos Home'
                     }
                 }
             ],
@@ -15,7 +15,7 @@ var render = function (theme, data, meta, require) {
                 {
                     partial: 'index_header',
                     context:{
-                        user_name:'admin@wso2.com'
+                        user_name: 'admin@wso2.com'
                     }
                 }
             ],
@@ -47,10 +47,13 @@ var render = function (theme, data, meta, require) {
                 {
                     partial:'configure_form',
                     context:{
-                        form_action:data.form_action,
-                        formHtml:data.formHtml,
-                        formData:data.formData,
-                        isForm:data.isForm
+                        form_action: data.form_action,
+                        formHtml: data.formHtml,
+                        formData: data.formData,
+                        isForm: data.isForm,
+                        content_body: {sections:
+                                        [,,,,,,,,,,,,,,,,,,,,,,,,,,,,]
+                        }
                     }
                 }
 

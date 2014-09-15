@@ -1,4 +1,4 @@
-body{background: url('../images/stratos_background.png');height: 100%;width: 100%; font-family: 'Open Sans', san-serif;}
+body{background: url('../images/stratos_background.png')  no-repeat; background-color:#4872fd; height: 100%;width: 100%; font-family: 'Open Sans', san-serif; }
 h1{font-family: 'Open Sans', san-serif;color: rgb(255,255,255);
     text-shadow: 0 0 5px rgb(75,75,75); margin: 2em 0px; font-weight: 600}
 /* index_header partial related styles */
@@ -98,7 +98,7 @@ h1{font-family: 'Open Sans', san-serif;color: rgb(255,255,255);
 }
 
 .content-menu-block{
-    padding: 1.5em;
+    padding: 1em;
     min-height: 21.429em;
     cursor: pointer;
 }
@@ -127,6 +127,21 @@ h1{font-family: 'Open Sans', san-serif;color: rgb(255,255,255);
 
 }
 
+.content-menu-block:after {
+    content: '';
+    position: absolute;
+    width:90%;
+    min-height: 21.429em;
+    border-bottom: 1px solid #e4e7ea;
+    left: 1.429em;
+    top: 1.429em;
+}
+
 .form-toolbar{
     margin: 0.714em 0em;
+}
+
+.row-overide{
+    margin-right: 0px;
+    margin-left: 0px;
 }

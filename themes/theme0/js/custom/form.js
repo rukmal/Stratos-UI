@@ -145,3 +145,17 @@ function updateJsonView () {
 	// Stringifying and prettifying json, then placing it in the editor
 	$('#jsoneditor').text(JSON.stringify(currentJson, null, '\t'));
 }
+
+
+$(document).ready(function() {
+    $('#list').click(function(event){
+        event.preventDefault();
+        $('.general-table .block').addClass('list-group-item');
+        $('.general-table .block').removeClass('grid-group-item');
+    });
+    $('#grid').click(function(event){
+        event.preventDefault();
+        $('.general-table .block').removeClass('list-group-item');
+        $('.general-table .block').addClass('grid-group-item');
+    });
+});
