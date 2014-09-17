@@ -35,12 +35,15 @@ $('#editortoggle').click(function () {
 		changeDisplayMode('#textform', '#jsonform');
 		$('#editortoggle').text('Form View');
 		isForm = false;
+		changeBoxHeight();
 	} else {
-		changeDisplayMode('#jsonform', '#textform');
-		$('#editortoggle').text('JSON Editor')
-		isForm = true;
+		if (updateFormView()) {
+			changeDisplayMode('#jsonform', '#textform');
+			$('#editortoggle').text('JSON Editor')
+			isForm = true;
+			changeBoxHeight();
+		}
 	}
-	changeBoxHeight();
 });
 
 /**
@@ -67,9 +70,9 @@ function getJsonSkeleton () {
 	var currentUrl = document.URL;
 	var reversedUrlPath = currentUrl.split('/').reverse();
 	// Note: The following is assuming that the path is of the format
-	// https://[stratos_ui_url]/{currentCategory}/{currentPage}
-	var currentPage = reversedUrlPath[1];
-	var currentCategory = reversedUrlPath[2];
+	// https://[stratos_ui_url]/{currentCategory}/{currentPage}/new/
+	var currentPage = reversedUrlPath[2];
+	var currentCategory = reversedUrlPath[3];
 	var requestData = {
 		category: currentCategory,
 		name: currentPage
@@ -113,7 +116,6 @@ function updateJsonView () {
 	 * @param  {Array}  remaining Hieracial path to the final value to be updated
 	 */
 	function updateJsonField (name, value, type, current, remaining) {
-		console.log('current: ' + JSON.stringify(current) + ' - remaining: ' + JSON.stringify(remaining));
 		if (remaining.length === 1) {
 			if (typeof(current) != 'Array') {
 				current[name] = value;
@@ -146,7 +148,6 @@ function updateJsonView () {
 	$('#jsoneditor').text(JSON.stringify(currentJson, null, '\t'));
 }
 
-
 $(document).ready(function() {
     $('#list').click(function(event){
         event.preventDefault();
@@ -159,3 +160,20 @@ $(document).ready(function() {
         $('.general-table .block').addClass('grid-group-item');
     });
 });
+
+/**
+ * Function to update the current form
+ * from the JSON
+ */
+function updateFormView () {
+	try {
+		var jsonText = $('#jsoneditor').val();
+		var parsedJsonText = eval('(' + jsonText + ')');
+		currentJson = parsedJsonText;
+	} catch (e) {
+		alert('Invalid JSON');
+		return false;
+	}
+	return true;
+}
+
