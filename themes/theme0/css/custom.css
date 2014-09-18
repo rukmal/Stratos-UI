@@ -145,3 +145,7 @@ h1{font-family: 'Open Sans', san-serif;color: rgb(255,255,255);
     margin-right: 0px;
     margin-left: 0px;
 }
+
+.form-control-feedback{
+    top: 0px;
+}
