@@ -20,10 +20,15 @@
  *
  */
 
-var log = new Log("apachestratos.login");
-var error=[];
-var caramel = require('caramel');
+var log = new Log("apachestratos.login"),
+    error = session.get("error"),
+    caramel = require('caramel');
 
+if(error == null) {
+    error = "";
+}
+
+session.remove("error");
 
 caramel.render({
     error: error

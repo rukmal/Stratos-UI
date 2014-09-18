@@ -24,10 +24,12 @@ var log = new Log("apachestratos.index");
 var error=[];
 var caramel = require('caramel');
 
+if(session.get("USER_NAME")==null || session.get("USER_NAME") === undefined){
+    response.sendRedirect(request.getContextPath()+'/login/');
+}
 
 caramel.render({
     error: error
 });
 
-session.invalidate();
 %>

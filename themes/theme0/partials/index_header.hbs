@@ -15,11 +15,11 @@
                 <span class="user-image">
                   <img src="{{url "/themes/theme0/images/avatar/"}}6497326.png" alt="example image" class="img-circle">
                 </span>
-                        {{user_name}}
+                        {{#user}}{{/user}}
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="{{url ""}}/controllers/login/logout.jag">Logout</a></li>
                     </ul>
                 </li>
             </ul>

@@ -23,6 +23,11 @@
 var log = new Log("apachestratos.configure_form");
 var error=[];
 var caramel = require('caramel');
+
+if(session.get("USER_NAME")==null || session.get("USER_NAME") === undefined){
+    response.sendRedirect(request.getContextPath()+'/login/');
+}
+
 var uriMatcher = new URIMatcher(request.getRequestURI());
 
 var elements = uriMatcher.match('/{context}/configure/{formtype}/');
