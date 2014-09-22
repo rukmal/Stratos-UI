@@ -24,9 +24,7 @@ var log = new Log("apachestratos.index");
 var error=[];
 var caramel = require('caramel');
 
-if(session.get("USER_NAME")==null || session.get("USER_NAME") === undefined){
-    response.sendRedirect(request.getContextPath()+'/login/');
-}
+include('/controllers/login/validator.jag');
 
 caramel.render({
     error: error

@@ -47,6 +47,13 @@ try{
         session.put("ROLE_ARRAY",roles);
         session.put("TENANT_ID",userObject.tenantId);
 
+        try{
+            log.info(user.isAuthorized("/permission/admin/manage/add/deploymentPolicy", "ui.execute"));
+            log.info(um.dakshika(userObject.username, '/'));
+        }catch(e){
+            log.info(e);
+        }
+
 
         require('console').server.current(session,username);
         print({status:1});
