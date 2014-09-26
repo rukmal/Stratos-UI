@@ -7,200 +7,82 @@
 	"new_url": "autoscalingpolicies/new",
 	"edit_url": "autoscalingpolicies/edit",
 	"form_spec": [
-		{
-			"type": "field",
-			"default_value": "",
-			"editable_during_new": true,
-			"editable_during_edit": true,
-			"label": "Autoscaling Policy ID",
-			"placeholder": "Enter an ID for the policy here",
-			"name": "id"
-		},
-		{
-			"type": "title",
-			"content": "Load Thresholds"
-		},
-		{
-			"type": "subform",
-			"label": "Requests in Flight",
-			"name": "requestsInFlight",
-			"content": [
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Average",
-					"placeholder": "Enter the request average here",
-					"name": "loadThresholds/requestsInFlight/average"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Second Derivative",
-					"placeholder": "Enter the second derivative here",
-					"name": "loadThresholds/requestsInFlight/secondDerivative"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Gradient Scaling Margin",
-					"placeholder": "Enter the scale down margin of the gradient here",
-					"name": "loadThresholds/requestsInFlight/scaleDownMarginOfGradient"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Second Derivative Scaling Margin",
-					"placeholder": "Enter the scale down margin of the second derivative here",
-					"name": "loadThresholds/requestsInFlight/scaleDownMarginOfSecondDerivative"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Gradient",
-					"placeholder": "Enter the request gradient here",
-					"name": "loadThresholds/requestsInFlight/gradient"
-				}
-			]
-		},
-		{
-			"type": "subform",
-			"label": "Memory Consumption",
-			"name": "memoryConsumption",
-			"content": [
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Average",
-					"placeholder": "Enter the memory consumption average here",
-					"name": "loadThresholds/memoryConsumption/average"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Second Derivative",
-					"placeholder": "Enter the second derivative here",
-					"name": "loadThresholds/memoryConsumption/secondDerivative"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Gradient Scaling Margin",
-					"placeholder": "Enter the scale down margin of the gradient here",
-					"name": "loadThresholds/memoryConsumption/scaleDownMarginOfGradient"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Second Derivative Scaling Margin",
-					"placeholder": "Enter the scale down margin of the second derivative here",
-					"name": "loadThresholds/memoryConsumption/scaleDownMarginOfSecondDerivative"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Gradient",
-					"placeholder": "Enter the memory consumption gradient here",
-					"name": "loadThresholds/memoryConsumption/gradient"
-				}
-			]
-		},
-		{
-			"type": "subform",
-			"label": "Load Average",
-			"name": "loadAverage",
-			"content": [
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Average",
-					"placeholder": "Enter the load average here",
-					"name": "loadThresholds/loadAverage/average"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Second Derivative",
-					"placeholder": "Enter the second derivative here",
-					"name": "loadThresholds/loadAverage/secondDerivative"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Gradient Scaling Margin",
-					"placeholder": "Enter the scale down margin of the gradient here",
-					"name": "loadThresholds/loadAverage/scaleDownMarginOfGradient"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Second Derivative Scaling Margin",
-					"placeholder": "Enter the scale down margin of the second derivative here",
-					"name": "loadThresholds/loadAverage/scaleDownMarginOfSecondDerivative"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Gradient",
-					"placeholder": "Enter the load gradient here",
-					"name": "loadThresholds/loadAverage/gradient"
-				}
-			]
-		}
-	],
-	"raw_json": {
-		"id": "",
-		"loadThresholds": {
-			"requestsInFlight": {
-				"average": 0,
-				"secondDerivative": 0,
-				"scaleDownMarginOfGradient": 0,
-				"scaleDownMarginOfSecondDerivative": 0,
-				"gradient": 0
-			},			
-			"memoryConsumption": {
-				"average": 0,
-				"secondDerivative": 0,
-				"scaleDownMarginOfGradient": 0,
-				"scaleDownMarginOfSecondDerivative": 0,
-				"gradient": 0
-			},
-			"loadAverage": {
-				"average": 0,
-				"secondDerivative": 0,
-				"scaleDownMarginOfGradient": 0,
-				"scaleDownMarginOfSecondDerivative": 0,
-				"gradient": 0
-			}
-		}
-	}
+        {
+            "type": "field",
+            "label": "Auto-scaling Policy ID",
+            "placeholder": "Enter an ID for the Auto-scaling Policy here",
+            "name": "id",
+            "value": "economy"
+        },
+        {
+            "type": "name_object",
+            "label": "Load Thresholds",
+            "name": "loadThresholds",
+            "value": [
+                {
+                    "type": "name_object",
+                    "label": "Requests In Flight",
+                    "name": "requestsInFlight",
+                    "value": [
+                        {
+                            "type": "field",
+                            "label": "Upper Limit",
+                            "placeholder": "Enter upperLimit",
+                            "name": "upperLimit",
+                            "value": "30"
+                        },
+                        {
+                            "type": "field",
+                            "label": "Lower Limit",
+                            "placeholder": "Enter lowerLimit",
+                            "name": "lowerLimit",
+                            "value": "5"
+                        }
+                    ]
+                },
+                {
+                    "type": "name_object",
+                    "label": "Memory Consumption",
+                    "name": "memoryConsumption",
+                    "value": [
+                        {
+                            "type": "field",
+                            "label": "Upper Limit",
+                            "placeholder": "Enter upperLimit",
+                            "name": "upperLimit",
+                            "value": "30"
+                        },
+                        {
+                            "type": "field",
+                            "label": "Lower Limit",
+                            "placeholder": "Enter lowerLimit",
+                            "name": "lowerLimit",
+                            "value": "5"
+                        }
+                    ]
+                },
+                {
+                    "type": "name_object",
+                    "label": "Load Average",
+                    "name": "loadAverage",
+                    "value": [
+                        {
+                            "type": "field",
+                            "label": "Upper Limit",
+                            "placeholder": "Enter upperLimit",
+                            "name": "upperLimit",
+                            "value": "30"
+                        },
+                        {
+                            "type": "field",
+                            "label": "Lower Limit",
+                            "placeholder": "Enter lowerLimit",
+                            "name": "lowerLimit",
+                            "value": "5"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
 }

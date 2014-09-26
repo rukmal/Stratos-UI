@@ -7,57 +7,65 @@
 	"new_url": "partition/new",
 	"edit_url": "partition/edit",
 	"form_spec": [
-		{
-			"type": "field",
-			"default_value": "",
-			"editable_during_new": true,
-			"editable_during_edit": true,
-			"label": "Partition ID",
-			"placeholder": "Enter an ID for the partition here",
-			"name": "id"
-		},
-		{
-			"type": "field",
-			"default_value": "",
-			"editable_during_new": true,
-			"editable_during_edit": true,
-			"label": "Minumum Partitions",
-			"placeholder": "Enter the minimum partitions here",
-			"name": "partitionMin"
-		},
-		{
-			"type": "field",
-			"default_value": "",
-			"editable_during_new": true,
-			"editable_during_edit": true,
-			"label": "Minimum Partitions",
-			"placeholder": "Enter the maximum partitions here",
-			"name": "partitionMax"
-		},
-		{
-			"type": "subform",
-			"label": "Properties",
-			"name": "property",
-			"content": [
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Name",
-					"placeholder": "Enter an name here",
-					"name": "property/name"
-				},
-				{
-					"type": "field",
-					"default_value": "",
-					"editable_during_new": true,
-					"editable_during_edit": true,
-					"label": "Value",
-					"placeholder": "Enter a value here",
-					"name": "property/value"
-				}
-			]
-		}
+        {
+            "type": "field",
+            "label": "Partition ID",
+            "placeholder": "Enter an ID for the Partition here",
+            "name": "id",
+            "value": "P1"
+        },
+        {
+            "type": "field",
+            "label": "Provider",
+            "placeholder": "Enter provider name here",
+            "name": "provider",
+            "value": "ec2"
+        },
+        {
+            "type": "name_array",
+            "label": "property",
+            "name": "property",
+            "value": [
+                {
+                    "type": "object",
+                    "value": [
+                        {
+                            "type": "field",
+                            "label": "name",
+                            "placeholder": "Enter name here",
+                            "name": "name",
+                            "value": "region"
+                        },
+                        {
+                            "type": "field",
+                            "label": "value",
+                            "placeholder": "Enter value here",
+                            "name": "value",
+                            "value": "ap-southeast-1"
+                        }
+                    ]
+                },
+                {
+                    "type": "object",
+                    "value": [
+                        {
+                            "type": "field",
+                            "label": "name",
+                            "placeholder": "Enter name here",
+                            "name": "name",
+                            "value": "zone"
+                        },
+                        {
+                            "type": "field",
+                            "label": "value",
+                            "placeholder": "Enter value here",
+                            "name": "value",
+                            "value": "ap-southeast-1a"
+                        }
+                    ]
+                }
+
+            ]
+        }
 	]
 }
